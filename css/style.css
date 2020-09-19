@@ -17,11 +17,14 @@
 --basic-background-white: #F9F5F0;
 --basic-background-header-grey: #F3F7F9;
 --basic-grey-price: #A9A9A9;
+--basic-white-opacity: rgba(255, 255, 255, 0.3);
+
 
 --slide-yellow: #FFBF47;
 --slide-blue: #3BBCE3;
 --slide-pinc: #DC91D8;
 --slide-green: #8ED78F;
+
 
 --tel-grey: #B7BFC8;
 
@@ -80,7 +83,7 @@ img {
 	align-items: center;
 }
 
-.up-linc-green {
+.up-link-green {
 	background-color: var(--basic-green);
 }
 
@@ -96,6 +99,8 @@ img {
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
 }
 
 .header-address {
@@ -108,9 +113,19 @@ img {
 	font-size: 21px;
     line-height: 21px;
     color: var(--basic-dark);
-    background-color: var(--special-manufactur); /*не отображается бэкграунд, не пойму почему (*/
+    background-color: var(--basic-white);
 }
 
+.login-open {
+    color: var(--basic-black-light);
+    font-size: 16px;
+    line-height: 18px;
+    list-style: none;
+}
+
+.login-open a {
+	color: var(--basic-black-light);
+}
 
 .main-navigation {
 	background-color: var(--basic-black-light);
@@ -134,12 +149,11 @@ img {
 }
 
 .features-list a {
-    list-style: none;
-    color: var(--basic-white);  /*.....Не пойму как сделать opacity */
-    font-size: 14px;
+    color: var(--basic-white);
     line-height: 18px;
     mix-blend-mode: normal; 
-    text-transform: uppercase 
+    text-transform: uppercase;
+    background-color: var(--basic-white-opacity);
 }
 
 .feature-item1 {
@@ -185,6 +199,70 @@ img {
     line-height: 18px; 
 }
 
+/*catalog*/
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs a{
+  color: var(--basic-black);
+}
+
+.perforator {
+	background-color: var(--basic-background-header-grey);
+	font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-black-light);
+    text-transform: uppercase;
+}
+
+.button-buy {
+	background-color: var(--basic-green);
+	color: var(--basic-white);
+	font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.button-buy:hover{
+  background-color: var(--special-green-guidance);
+}
+.button-buy:active {
+  background-color: var(--special-green-klik);
+}
+
+.button-marker {
+	background-color: var(--basic-white);
+	color: var(--basic-black-light);
+	font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border: 1px solid var(--basic-green);
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item a {
+	background-color: var(--basic-white);
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.pagination-item-current {
+	background-color: var(--basic-red);
+}
+
+/*inform*/
+
+.inform {
+	background-color: var(--basic-white-milk)
+}
 /*product*/
 
 .heading {
