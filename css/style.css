@@ -33,14 +33,16 @@
 --special-black-klik: #1D2739;
 --special-black-guidance: #CA2C37;
 --special-red-klik: #BA2732;
---special-red-guidance: #BA2732;
+--special-red-guidance: #CA2C37;
 --special-green-klik: #518534;
 --special-green-guidance: #5FBB2D;
 --special-manufactur: rgba(0, 0, 0, 0.0001);
 --special-green-guidance: #5FBB2D;
 --special-radiobutton-guidance: #B5B5B5;
 --special-white-klik: rgba(255, 255, 255, 0.5);
-
+--special-dark-guidance: #293449;
+--special-grey-guidance: rgba(197, 197, 197, 0.3);
+--special-grey-klik: rgba(169, 169, 169, 0.3);
 }
 
 /*Global*/
@@ -139,6 +141,36 @@ img {
 	color: var(--basic-white);
 }
 
+.site-navigation a:hover {
+    background-color: var(--special-dark-guidance);   
+}
+
+.site-navigation a:active {
+    background-color: var(--special-black-klik);
+    color: var(--special-white-klik);
+}
+
+.Search::before {
+	content: url(../img/logo/icon-search.svg);
+	color: var(--basic-white-opacity); /*....а можно будет нормально отодаинуть от текств иконку, это вообще удачный выбор?*/
+}                                              /*и еще проблема, я взял готовые svg, но цвет у них белый а нужен с прозр. 0.3*/
+
+.up-link-bookmark::before {
+	content: url(../img/logo/icon-bookmark.svg);
+}
+
+.up-link-cart::before {
+	content: url(../img/logo/icon-cart.svg);
+}
+
+.header-ring::before {
+	content: url(../img/logo/icon-phone.svg);
+}
+
+.header-login::before {
+    content: url(../img/logo/icon-login.svg);
+}
+
 /*features*/
 
 .features-list {
@@ -155,6 +187,14 @@ img {
     text-transform: uppercase;
     background-color: var(--basic-white-opacity);
 }
+
+.features-list a:hover {
+    background-color: var(--special-grey-guidance);
+}
+
+.features-list a:active {
+    background-color: var(--special-grey-klik);
+}        
 
 .feature-item1 {
 	background-color: var(--slide-yellow);
@@ -199,6 +239,14 @@ img {
     line-height: 18px; 
 }
 
+.button:hover {
+    background-color: var(--special-red-guidance);
+}
+
+.button:active {
+    background-color: var(--special-red-klik);
+}        
+
 /*catalog*/
 
 .breadcrumbs {
@@ -228,10 +276,10 @@ img {
     text-transform: uppercase;
 }
 .button-buy:hover{
-  background-color: var(--special-green-guidance);
+    background-color: var(--special-green-guidance);
 }
 .button-buy:active {
-  background-color: var(--special-green-klik);
+    background-color: var(--special-red-klik);
 }
 
 .button-marker {
@@ -383,3 +431,14 @@ img {
 .social-list {
 	list-style: none;
 }
+
+.login-link-open a::before {
+    content: url(../img/logo/icon-user.svg);
+}
+
+.login-link-open a::after {
+    content: url(../img/logo/login-open.svg);
+}    
+
+.button-buy::before {
+    content: url(../img/logo/icon-cart.svg);  
