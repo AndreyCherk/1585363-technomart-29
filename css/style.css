@@ -100,11 +100,13 @@ img {
 
 .header-up{
 	color: var(--basic-white);
+    display: flex;
+    align-items: center;
+    height: 42px;
+}
 
-    
-    /*grid-column-start: 1;
-    grid-column-end: 4;*/
-
+.up-link-bookmark {
+    margin-left: auto;
 }
 
 .color-header-up {
@@ -168,11 +170,18 @@ img {
     background-color: var(--basic-white);
 }
 
+.login-link-open {
+
+}
+
 .login-open {
     color: var(--basic-black-light);
     font-size: 16px;
     line-height: 18px;
     list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
 }
 
 .login-open a {
@@ -189,16 +198,31 @@ img {
 
 .main-navigation {
 	background-color: var(--basic-black-light);
+    
+    margin: 40px 0px 60px;
 }
 
 .site-navigation {
 	list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
+    min-height: 60px;
+    
+}
+
+.site-navigation li {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    
 }
 
 .site-navigation a {
 	color: var(--basic-white);
+    /*padding: 16px 24px 20px 27px;*/
+
 }
 
 .site-navigation a:hover {
@@ -276,6 +300,13 @@ img {
     text-transform: uppercase;
     width: 300px;
     height: 123px;
+    display: grid;
+    grid-template-columns: 143px 1fr;
+    /*grid-template-rows: 1fr 1fr;*/
+}
+
+.feature-item img {
+
 }
 .feature-item-position1 {
     grid-column-start: 1;
@@ -374,10 +405,18 @@ img {
 /*catalog*/
 
 .breadcrumbs {
-  list-style: none;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
+    list-style: none;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    margin-right: 10px;
 }
 
 .breadcrumbs a{
@@ -417,6 +456,9 @@ img {
 
 .pagination-list {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
 }
 
 .pagination-item a {
@@ -424,6 +466,7 @@ img {
     color: var(--basic-black);
     font-size: 13px;
     line-height: 18px;
+    margin-right: 10px;
 }
 
 .pagination-item-current {
@@ -444,6 +487,10 @@ img {
     color: var(--basic-black-light);
     background-color: var(--basic-background-white);
     height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 .product-list {
@@ -451,6 +498,15 @@ img {
 	list-style: none;
     margin: 0px;
     padding: 0px;
+}
+
+.product-list li {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .product-list-index {
@@ -522,9 +578,15 @@ img {
 }
 
 .manufacturer-list li {
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
     height: 145px;
     width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /*service*/
 
@@ -532,8 +594,22 @@ img {
 	background-color: var(--basic-white-milk);
 }
 
-.service-main {             /*.........здесь совсем не Гриды, я так понимаю, все уровни разные*/
+.service-main {             
     height: 522px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+}
+
+.service-top {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.delivery {
+    display: flex;
+    justify-content: space-around;   /*...проблема, текст должен заходить на картинку, а у меня переноситься.*/
 }
 
 .heading-black {
@@ -590,7 +666,9 @@ img {
 
 /*navigation*/
 
-
+.main-footer {
+    min-height: 300px;
+}
 
 .navigation {
     display: grid;
@@ -602,10 +680,21 @@ img {
 	color: var(--basic-background-header-grey);
 }
 
+.navigation-footer {
+    display: flex;
+    flex-direction: column;
+}
+
 .navigation-footer-list-white {
 	list-style: none;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-footer-list-white li {
+    margin-left: 60px;
 }
 
 .navigation-footer-list-white a {
@@ -616,6 +705,12 @@ img {
 	list-style: none;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-footer-list-gold li {
+    margin-left: 60px;
 }
 
 .navigation-footer-list-gold a {
@@ -632,6 +727,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    min-height: 107px;
 }
 
 .connect-inform {
@@ -645,22 +741,29 @@ img {
 }
 
 .footer-social {
-    justify-self: center;
+    display: flex;
 }
 
 .social-list {
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
 	list-style: none;
     margin: 0px;
     padding: 0px;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+ 
 }
 
 .social-list a {
-    margin: auto; /*...поставил два path, провозился кучу времени и не понял, как сделать, чтобы отображались нормально, темный круг порезаный*/
-    
-    
-        
+    margin: 10px; /*...поставил два path, провозился кучу времени и не понял, как сделать, чтобы отображались нормально, темный круг порезаный*/     
+}
+
+.connect-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -690,6 +793,10 @@ img {
     list-style: none;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 
 .sort-list a {
