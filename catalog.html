@@ -12,44 +12,47 @@
     <header class="main-header">
       <div class="color-header-up"> 
       <div class="header-up container">
-        <a class="main-header-logo">
-          <img src="img/logo/logo-teh1.svg" width="220" height="47" alt="Логотип магазина «Технолайт»">
-        </a>  
-
-        <label class="Search">Поиск:</label>
-
-            <a class="up-link-bookmark" href="">Закладки:</a>
-
-          <a class="up-link-cart" href="">Корзина:</a>
-
-          <a class="up-link-green" href="">Оформить заказ</a>  <!-- Расположены в ряд, не знаю...в столбик лучше бы смотрелось..Оставил пока так -->
-        
+          <div class="main-header-logo">
+            <a href="index.html">
+              <img src="img/logo/logo-teh1.svg" width="108" height="18" alt="Логотип магазина «Технолайт»">
+            </a>
+          </div>
+          <div class="search">
+             <label class="link-search">Поиск:<input type="search" name="search"></label>
+          </div>  
+          <div class="up-header-bookmark">
+            <a class="up-link-bookmark" href="">Закладки: 0</a>
+          </div> 
+          <div class="up-header-basket login-open-basket">
+            <a class="up-link-basket" class="" href="">Корзина: 0</a>
+          </div>
+            <div class="up-header-green"> 
+            <a class="up-link-green" href="">Оформить заказ</a>
+          </div>
         </div>
        </div> 
 
         <div class="down-header container">
           <p class="header-text">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
-           <div class="header-contacts">
-            <a class="header-ring" href="">+7(812)555-05-55</a>
+          <div class="header-contacts">
+            <span class="header-ring" href="">+7(812)555-05-55</span>
           
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <div>
-            <div class="login-link login-link-open">
-              <a href="">Равшан Джамшутович</a>
-            </div>
-
-            <ul class="login-open">
-              <li><a href="">Мои заказы</a></li>
-              <li><svg width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00025 0.494141C3.09717 0.494141 3.98644 1.38357 3.98644 2.4801C3.98644 3.57758 3.09717 4.46647 2.00025 4.46647C0.903122 4.46647 0.013916 3.57758 0.013916 2.4801C0.013916 1.38357 0.903122 0.494141 2.00025 0.494141Z" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00025 0.494141C3.09717 0.494141 3.98644 1.38357 3.98644 2.4801C3.98644 3.57758 3.09717 4.46647 2.00025 4.46647C0.903122 4.46647 0.013916 3.57758 0.013916 2.4801C0.013916 1.38357 0.903122 0.494141 2.00025 0.494141Z" fill="#32425C"/>
-                </svg></li>
-              <li><a href="">Личный кабинет</a></li>
-            </ul>
-           </div>
+          <div class="header-link-open">
+          
+                <a class="login-link-user" href="">Равшан Джамшутович</a>
+            
+              <ul class="login-open">
+                 <li><a href="">Мои заказы</a></li>
+                  <li>
+                    <div class="dot"></div></li>
+                 <li><a href="">Личный кабинет</a></li>
+              </ul>
+            
           </div>
-          <div class="header-navigation container">
+       </div>
+        <div class="header-navigation container">
             <nav class="main-navigation">
               <ul class="site-navigation">
                 <li><a>Главная</a></li>
@@ -61,7 +64,7 @@
                 <li><a href="">Контакты</a></li>
               </ul>
             </nav>
-          </div>
+        </div>
 
     </header>
 
@@ -72,7 +75,9 @@
      
       <ul class="breadcrumbs">
          <li>
-           <img src="img/icons/icon-home.svg">
+           <a href="">
+             <img src="img/icons/icon-home.svg">
+           </a>
          </li>
          <li>
            <a href="">Каталог</a>
@@ -89,17 +94,34 @@
      </div> 
     <section class="catalog-main container">
      <div class="filters">
-      <h4 class>Фильтр:</h4>
-      
-       <!-- <h2 class="visually-hidden">Фильтр товаров</h2> -->
+       <div class="heading-filtr heading-catalog">
+         <h4 class>Фильтр:</h4>
+       </div>  
         <form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="priceoutput.value=priccount.value">
 
-          <legend>Цена:</legend>
-          <input type="range" min="0" max="30000" name="priccount">
-          <output name="priceoutput">0</output>
-       
-         <legend>Производители:</legend>
-         <ul>
+          <fieldset class="filter-item filter-item-price">
+            <legend>Цена:</legend>
+          </fieldset>
+           <div class="range-filter">
+             <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+             </div>
+             <div class="price-controls">
+               <input type="number" name="min-price" value="0">
+               <div></div>
+               <input type="number" name="max-price" value="30000">
+             </div>
+            </div>
+      
+         <fieldset class="filter-item filter-item-manufacturer">
+            <legend>Производители:</legend>
+          </fieldset>
+          <div class="filter-list-checkbox">
+          <ul>
           <li class="filter-option filter-checkbox">
             <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
             <label for="filter-bosch">Bosch</label>
@@ -121,8 +143,11 @@
             <label for="filter-hitachi">Hitachi</label>
            </li>
           </ul>
+          </div>
           
-         <legend>Питание:</legend>
+         <fieldset class="filter-item filter-item-battery">
+            <legend>Производители:</legend>
+          </fieldset>
          <ul>
           <li class="filter-option filter-radio">
             <input class="visually-hidden filter-input-radio filter-input" type="radio" name="supply" value="battery" id="filter-battery">
@@ -134,22 +159,24 @@
           </li>
          </ul>
        
-        <button type="submit" class="filter-button button">Показать</button>
+        <button type="submit" class="filter-button">Показать</button>
       </form>
     </div>
-    <div class="sort container">
-
-     <h4>Сртировка:</h4>
-     <ul class="sort-list">
-      <li><a href="#">по цене</a></li>
-      <li><a href="#">по типу</a></li>
-      <li><a href="#">по функционалу</a></li>
-     </ul>
-
+    <div class="heading-catalog sort">
+      <div class="heading-sort">
+        <h4>Сртировка:</h4>
+      </div>   
+      <ul class="sort-list">
+        <li class="sort-list-price"><a href="#">по цене</a></li>
+        <li class="sort-list-type"><a href="#">по типу</a></li>
+        <li class="sort-list-function"><a href="#">по функционалу</a></li>
+      </ul>
+      <div class="btn-shop">
+          <a class="active btn-top" href=""></a>
+          <a class="btn-bottom" href=""></a>
+      </div>
     </div>
     <div class="catalog container">
-        
-        <!-- <h3>Список перфораторов</h3> -->
 
         <ul class="product-list-catalog product-list">
             <li>
@@ -277,29 +304,21 @@
           </ul>
         </div>
       </section> 
-      <div class="container">
+      <div class="pagination container">
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">
-            <a>1</a>
-          </li>
-          <li class="pagination-item">
-            <a href="">2</a>
-          </li>
-           <li class="pagination-item">
-            <a href="">3</a>
-           </li>
-           <li class="pagination-item">
-            <a href="">Следующая</a>
-           </li>
+          <li class="pagination-item pagination-item-current"><a>1</a></li>
+          <li class="pagination-item"><a href="">2</a></li>
+          <li class="pagination-item"><a href="">3</a></li>
+          <li class="pagination-item pagination-item-next"><a href="">Следующая</a></li>
         </ul>
       </div>  
-      <section class="inform">
+      <div class="inform">
        <div class="container">
          <h3 class="heading-black">Пара слов о перфотарах</h3>
 
-         <p class="service-text"><b>Перфоратор</b> — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p> <!-- ....выделил «Перфоратор», хотя на эскизе этого не видно!..Верно? -->
+         <p class="service-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
        </div> 
-      </section>
+      </div>
        
     </main>
 
@@ -307,7 +326,7 @@
         <div class="navigation container">
         <!-- <h2>Навигация</h2> -->
           <div class="address">
-          <a>
+          <a href="index.html">
           <img class="main-footer-logo" src="img/logo/logo-teh2.svg" width="220" height="68" alt="Логотип магазина «Технолайт»">
           </a>  
 
