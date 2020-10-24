@@ -18,7 +18,7 @@
 --basic-background-grey: #888888;
 --basic-background-white: #F9F5F0;
 --basic-background-header-grey: #F3F7F9;
---basic-background-perforator-grey: #F2F6F8;
+--basic-background-tool-grey: #F2F6F8;
 --basic-grey-price: #A9A9A9;
 --basic-grey-modal: #F4F4F4;
 --basic-white-opacity: rgba(255, 255, 255, 0.3);
@@ -644,13 +644,6 @@ input[type="search"]:focus ~ .search {
     
 }
 
-.gallery {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4; 
-    position: relative;
-}
 
 .gallery-content {
     margin: 0px;
@@ -721,10 +714,11 @@ input[type="search"]:focus ~ .search {
     grid-row-start: 2;
     grid-row-end: 4;
     position: relative;
+    background-color: var(--special-grey-push);
 }
 
 .gallery-content {
-    margin-left: 0px;  
+    margin-left: 0px; 
 }
 
 .gallery-text {
@@ -754,12 +748,12 @@ input[type="search"]:focus ~ .search {
     
 }
 
-.gallery-drel {
-    display: block;
+.gallery-item-one {
+    display: none;
 }
 
-.gallery-perforator {
-    display: none;
+.gallery-item-two {
+    display: block;
 }
 
 .gallery-controls {
@@ -888,8 +882,8 @@ input[type="search"]:focus ~ .search {
   color: var(--basic-black);
 }
 
-.perforator {
-	background-color: var(--basic-background-perforator-grey);
+.tool {
+	background-color: var(--basic-background-tool-grey);
 	font-size: 30px;
     line-height: 30px;
     color: var(--basic-black-light);
@@ -1283,20 +1277,24 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 14.65px 0px 0px;
 }
 
+.filter-input:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto var(--basic-black);
+}
+        
+/*definition*/
 
-/*inform*/
-
-.inform {
+.definition {
 	background-color: var(--basic-white-milk)
 
 }
 
-.inform h3 {
+.definition h3 {
     padding-top: 64px;
     padding-bottom: 25px;
 }
 
-.inform p {
+.definition p {
     padding: 0px;
     margin: 0px;
     padding-bottom: 68px;
@@ -1352,6 +1350,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .product-image img {
     align-self:center;
+    background-color: var(--basic-white-milk);
 }
 
 
@@ -1442,7 +1441,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: none;
 }   
 
-.active a {
+.active button {
     display: block;
     font-family: 'Cuprum', sans-serif;
     font-size: 14px;
@@ -1452,6 +1451,9 @@ input[type="number"]::-webkit-inner-spin-button {
     text-transform: uppercase;
     padding: 0px;
     border-radius: 2px;
+    border:none;
+    width: 135px;
+    height: 38px;
 }
 
 .active .buy {
@@ -1485,37 +1487,40 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: var(--basic-white);
     color: var(--basic-black-light);
     border: 3px solid var(--basic-green);
-    width: 129px;
-    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.active .buy:hover{
+.active .buy:hover,
+.active .buy:focus {
     background-color: var(--special-green-guidance);
 }
 
-.inner-product .active .buy:active{
+.inner-product .active .buy:active {
     background-color: var(--special-green-push);
 }
 
-.inner-product .active .bookmark:hover{
+.inner-product .active .bookmark:hover,
+.inner-product .active .bookmark:focus {
     border-color: var(--basic-black-light);
 }
-.inner-product .active .bookmark:active{
+.inner-product .active .bookmark:active {
     opacity: 0.5;
 }
 
-.inner-product:hover .active{
+.inner-product:hover .active,
+.inner-product:focus .active {
     display: block;
 }
 
-.inner-product:hover {
+.inner-product:hover,
+.inner-product:focus {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.inner-product:hover img{
+.inner-product:hover img,
+.inner-product:focus img {
     display: none;
 }  
 
@@ -1595,7 +1600,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .delivery {
     background: url("../img/logo/delivery.png") no-repeat 230px 70px;
-    display: none;
+    display: block;
 }
 
 .warranty {
@@ -1604,7 +1609,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .credit {
-    display: block;
+    display: none;
     background: url("../img/logo/credit.png") no-repeat 235px 45px;
 }
 
@@ -1688,6 +1693,11 @@ input[type="number"]::-webkit-inner-spin-button {
     color: var(--basic-black-light);
     background: var(--basic-white);
     border-color: var(--basic-white);
+}
+
+.service-controls-curent button{
+    background: var(--basic-white);
+    color: var(--basic-black-light);
 }
 
 .button-credit {
@@ -1952,7 +1962,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Modal */
 
 .modal {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1968,7 +1978,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 .modal-letter {
-    top: 350px;
+    top: 2361px;
     bottom: auto;
     width: 620px;
     display: none;
@@ -2070,6 +2080,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .modal-map {
     display: none;
+    top: 2369px;
+    bottom: auto;
     width: 943px;
     height: 442px;
 }
