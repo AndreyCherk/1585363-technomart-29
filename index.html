@@ -18,8 +18,9 @@
   			  </a>
   			</div>	
             <div class="search">
-             <label class="link-search"><input type="search" name="search" placeholder="Поиск:"></label>
-          </div>  
+              <label class="link-search"></label>
+              <input class="field-search" type="search" name="search" placeholder="Поиск:">
+            </div>  
             <div class="up-header-bookmark">
               <a class="up-link-bookmark" href="">Закладки: 0</a>
             </div> 
@@ -35,7 +36,7 @@
         <div class="down-header container">
         	<p class="header-text">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
             <div class="header-contacts">
-        	   <span class="header-ring" href="">+7(812)555-05-55</span>
+        	   <a class="header-ring" href="tel:+78125550555">+7(812)555-05-55</a>
         	
                <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
@@ -158,9 +159,8 @@
                 </div>
                 <div class="product-button">
                   <h3>
-                    <span>Перфоратор BOSCH</span> 
-               	    <span>BFG 9000</span>
-                 </h3>
+                    Перфоратор BOSCH BFG 9000
+                  </h3>
                 </div>
                 <div class="discount">32500 P.</div>
                 <div class="product-price">25500 P.</div>
@@ -175,8 +175,7 @@
                 </div>
                 <div class="product-button">
                   <h3>
-                    <span>Перфоратор BOSCH</span>
-                    <span>BFG 3000</span>
+                    Перфоратор BOSCH BFG 3000
                   </h3>
                 </div>
                 <div class="discount">22500 P.</div>
@@ -192,9 +191,8 @@
                    <img src="img/product/product-3.jpg" width="144" height="128" alt="">
                 </div>
                 <div class="product-button">
-                   <h3>
-                     <span>Перфоратор BOSCH</span> 
-                     <span>BFG 6000</span> 
+                  <h3>
+                    Перфоратор BOSCH BFG 6000
                   </h3>
                 </div>
                 <div class="discount">30500 P.</div>
@@ -210,8 +208,7 @@
                 </div>
                 <div class="product-button">
                   <h3>
-               	    <span>Перфоратор BOSCH</span> 
-               	    <span>BFG 2000</span>
+                    Перфоратор BOSCH BFG 2000
                   </h3>
                 </div>
                 <div class="discount">12500 P.</div>
@@ -272,10 +269,9 @@
          </div>
          
           <div class="service-controls">
-            <button type="button" aria-label="Доставка">Доставка</button>
-            <button type="button" aria-label="Гарантия">Гарантия</button>
-            <button type="button" aria-label="Кредит">Кредит</button>
-            <div><img src="img/logo/shadow-line.png" width="10" height="279" alt="shadow-line"></div>
+            <button class="service-controls-button service-active" type="button" aria-label="Доставка">Доставка</button>
+            <button class="service-controls-button" type="button" aria-label="Гарантия">Гарантия</button>
+            <button class="service-controls-button" type="button" aria-label="Кредит">Кредит</button>
           </div>    
          
          <div class="delivery">
@@ -299,7 +295,7 @@
             <h3 class="delivery-heading">Кредит</h3>
              <p class="service-text service-text-down">Залезть в долговую яму стало проще!<br> 
                Кредитные консультанты придут вам на помощь</p>
-             <a href="" class="button-credit">Отправить заявку</a>  
+             <a href="" class="button button-heading button-credit ">Отправить заявку</a>  
          </div>
         
      </div>
@@ -334,11 +330,11 @@
         заехав в наш офис:</span>
         <div class="map-main">
            <a href="">
-        	  <img class="map" src="img/logo/Map.jpg" width="300" height="158" alt="Map"><!-- . Карта нормально не встает...не пойму -->
+        	  <img class="map" src="img/logo/Map.jpg" width="300" height="158" alt="Map">
            </a>
         </div>
         <div>
-        	<a class="button button-contacts">Заблудились? Напишите нам</a>
+        	<button class="button button-contacts" type="button" aria-label="Первый слайд">Заблудились? Напишите нам</button>
         </div>
 
       </div>
@@ -354,7 +350,7 @@
             </a>  
 
              <p class="contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-             +7 (812) 555-05-55</p>
+             <a href="tel:+78125550555">+7(812)555-05-55</a></p>
           </div>
           <div class="navigation-footer">
               <ul class="navigation-footer-list-white">             
@@ -419,8 +415,8 @@
     </footer>
 
     <section class="modal modal-letter">
-       <div class="modal-container">
-         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-container">
          <div class="modal-form-top">
           <div>  
             <label for="login-name">Ваше имя:</label>
@@ -431,19 +427,17 @@
             <input class="login-icon-email" id="login-email" type="email" name="email" placeholder="email@example.com">
           </div>
          </div>
-        
-          <div>
+         <div>
             <label for="text-letter">Текст письма</label>
             <textarea name="letter" id="text-letter" cols="3">В свободной форме</textarea>  
           </div>
-       </div>   
+        </div>   
         <div class="modal-form-bottom"> 
          <div class="modal-container">
           <button class="button" type="submit">Отправить</button>
          </div>
         </div>
       </form>
-
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
