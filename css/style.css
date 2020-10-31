@@ -167,14 +167,26 @@ img {
 .field-search {
     color: var(--basic-black);
     background: none;
-    width: 271px;
+    width: 270px;
     min-height: 43px;
     border: none;
     outline: none;
     padding-left: 42px;
 }
 
+.field-search::placeholder {
+    color: var(--basic-white); 
+}
+
 .field-search::-moz-placeholder {
+    color: var(--basic-white); 
+}
+
+.field-search:-moz-placeholder {
+    color: var(--basic-white); 
+}
+
+.field-search::-webkit-input-placeholder {
     color: var(--basic-white); 
 }
 
@@ -203,20 +215,19 @@ img {
     position: absolute;
     width: 17px;
     height: 17px;
-    background-image: url("../img/icons/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: url("../img/icons/icon-search.svg") no-repeat 0 0;
     top: 11px;
-    left: 18px;
+    left: -253px;
     opacity: 0.3;    
 }
 
-.field-search:focus + .link-search::before {
-    background-image: url("../img/icons/icon-search-red.svg");
+.field-search:hover + .link-search::before {
+    opacity: 1;
 }
 
-.link-search:hover::before,
-.link-search:focus::before {
+
+.field-search:focus + .link-search::before {
+    background: url("../img/icons/icon-search-red.svg") no-repeat 0 0;
     opacity: 1;
 }
 
@@ -259,7 +270,6 @@ img {
 .up-header-basket {
     margin-left: 14px;
 }
-
 
 .up-header-basket .up-link-basket {
     padding: 9px 26px 9px 35px;
@@ -728,7 +738,7 @@ img {
     background: var(--basic-background-gallery);
     position: absolute;
     width: 620px;
-    min-height: 104px;
+    height: 104px;
 }
 
 .gallery-txt-big {
@@ -2030,6 +2040,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .modal {
     position: fixed;
+    display: none;
     top: 0;
     right: 0;
     bottom: 0;
@@ -2041,6 +2052,15 @@ input[type="number"]::-webkit-inner-spin-button {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 /* Modal letter */
 
 
@@ -2048,7 +2068,6 @@ input[type="number"]::-webkit-inner-spin-button {
     top: 300px;
     bottom: auto;
     width: 620px;
-    display: none;
 }
 
  .modal-container {
@@ -2146,7 +2165,6 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Modal map */
 
 .modal-map {
-    display: none;
     top: 270px;
     bottom: auto;
     width: 943px;
@@ -2161,7 +2179,6 @@ input[type="number"]::-webkit-inner-spin-button {
 /*modal-basket*/
 
 .modal-basket {
-    display: none;
     width: 620px;
     height: 275px;
 }
@@ -2177,7 +2194,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .modal-basket h3:before{
     content: "";
-    display: block;
     position: absolute;
     top: -17px;
     left: -95px;
@@ -2214,4 +2230,46 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
