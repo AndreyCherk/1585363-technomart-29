@@ -1,5 +1,3 @@
-
-
 const basketButton = document.querySelectorAll(".buy");
 const basketPopup = document.querySelector(".modal-basket");
 const buttonCloseBasket = basketPopup.querySelector(".modal-close");
