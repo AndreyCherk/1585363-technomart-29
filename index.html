@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -16,11 +16,11 @@
   			    <a href="index.html">
   				  <img src="img/logo/logo-teh-up.svg" width="108" height="18" alt="Логотип магазина «Технолайт»">
   			    </a>
-  			  </div>	
-          <div class="search">
+  			  </div>
+          <form class="search" method="get" action="https://echo.htmlacademy.ru">	
             <input class="field-search" type="search" id="searching" placeholder="Поиск:">
             <label class="link-search" for="searching" aria-label="Поиск"></label>
-          </div>  
+          </form> 
           <div class="up-header-bookmark">
             <a class="up-link-bookmark" href="">Закладки: 0</a>
           </div> 
@@ -67,35 +67,35 @@
   	    	<div class="feature-item feature-item-one feature-item-new">  	    			
   	    		  <h3>Материалы</h3>
   	    		  <div class="features-item-img features-item-materials">
-  	    		    <img src="img/icons/icon-materials.svg" width="44" height="65" alt="Краска">
+  	    		    <img src="img/icons/icon-materials.svg" width="44" height="65" alt="">
   	    		  </div>   
               <a href="">На любой вкус</a>
   	    	</div>
   	    	<div class="feature-item feature-item-two">
   	    		  <h3>Инструмент</h3>
   	    		  <div class="features-item-img features-item-tool">
-  	    		    <img src="img/icons/icon-tool.svg" width="75" height="61" alt="Шуруповерт">
+  	    		    <img src="img/icons/icon-tool.svg" width="75" height="61" alt="">
               </div>
               <a href="catalig.html">На все случаи</a>
           </div>
   	    	<div class="feature-item feature-item-three">	
   	    		  <h3>Техника</h3>
   	    		  <div class="features-item-img features-item-machinery">
-  	    		    <img src="img/icons/icon-machinery.svg" width="78" height="62" alt="Трактор">
+  	    		    <img src="img/icons/icon-machinery.svg" width="78" height="62" alt="">
               </div> 
               <a href="">Для стройки</a>
           </div>
   	      <div class="feature-item feature-item-four">
   	    		  <h3>Скидки 50%</h3>
   	    		  <div class="features-item-img features-item-discounts">
-  	    		    <img src="img/icons/icon-discounts.svg" width="59" height="73" alt="Тележка">
+  	    		    <img src="img/icons/icon-discounts.svg" width="59" height="73" alt="">
               </div>  
               <a href="">На 350 товаров</a>
           </div>
   	      <div class="feature-item feature-item-five"> 	    		
   	    		  <h3>Доставка</h3>
   	    		  <div class="features-item-img features-item-delivery">
-  	    		    <img src="img/icons/icon-delivery.svg" width="78" height="63" alt="Машина">
+  	    		    <img src="img/icons/icon-delivery.svg" width="78" height="63" alt="">
               </div>
               <a href="">Бесплатно</a>
           </div>
@@ -125,11 +125,11 @@
              <button class="gallery-controls-two current-button" type="button" aria-label="Второй слайд"></button>
             </div>
             <div class="gallery-scrolling">
-             <button class="gallery-scrolling-right" type="button" aria-label="Первый слайд">
-               <img src="img/icons/icon-left.svg" width="21" height="40" alt="scrolling-left">
+             <button class="gallery-scrolling-left" type="button" aria-label="Прокурутка влево">
+               <img src="img/icons/icon-left.svg" width="21" height="40" alt="">
              </button>
-             <button class="gallery-scrolling-left" type="button" aria-label="Второй слайд">
-               <img src="img/icons/icon-left.svg" width="21" height="40" alt="scrolling-right">
+             <button class="gallery-scrolling-right" type="button" aria-label="Прокрутка вправо">
+               <img src="img/icons/icon-left.svg" width="21" height="40" alt="">
              </button>
             </div> 
            </div> 
@@ -143,12 +143,10 @@
   		  <ul class="product-list-index product-list">
             <li class="inner-product" tabindex="0">
                 <div class="product-image">
-                   <img src="img/product/product-one.jpg" width="184" height="164" alt="">
+                   <img src="img/product/product-one.jpg" width="184" height="164" alt="Аккумуляторный перфоратор BOSCH BFG 9000 синего цвета">
                 </div>
                 <div class="product-button">
-                  <h3>
-                    Перфоратор BOSCH BFG 9000
-                  </h3>
+                  <h3>Перфоратор BOSCH BFG 9000</h3>
                 </div>
                 <div class="discount">32500 P.</div>
                 <div class="product-price">25500 P.</div>
@@ -159,12 +157,10 @@
             </li>
             <li class="inner-product inner-product-new" tabindex="0">
             	<div class="product-image">
-                   <img src="img/product/product-two.jpg" width="127" height="112" alt="">
+                   <img src="img/product/product-two.jpg" width="127" height="112" alt="Аккумуляторный перфоратор BOSCH BFG 3000 синего цвета">
                 </div>
                 <div class="product-button">
-                  <h3>
-                    Перфоратор BOSCH BFG 3000
-                  </h3>
+                  <h3>Перфоратор BOSCH BFG 3000</h3>
                 </div>
                 <div class="discount">22500 P.</div>
                 <div class="product-price">15500 P.</div>
@@ -175,12 +171,10 @@
             </li>
             <li class="inner-product" tabindex="0">
             	<div class="product-image">
-                   <img src="img/product/product-three.jpg" width="144" height="128" alt="">
+                   <img src="img/product/product-three.jpg" width="144" height="128" alt="Аккумуляторный перфоратор BOSCH BFG 6000 синего цвета">
                 </div>
                 <div class="product-button">
-                  <h3>
-                    Перфоратор BOSCH BFG 6000
-                  </h3>
+                  <h3>Перфоратор BOSCH BFG 6000</h3>
                 </div>
                 <div class="discount">30500 P.</div>
                 <div class="product-price">25500 P.</div>
@@ -191,12 +185,10 @@
             </li>
             <li class="inner-product inner-product-new" tabindex="0">
             	<div class="product-image">
-                   <img src="img/product/product-four.jpg" width="127" height="112" alt="">
+                   <img src="img/product/product-four.jpg" width="127" height="112" alt="Аккумуляторный перфоратор BOSCH BFG 2000 синего цвета">
                 </div>
                 <div class="product-button">
-                  <h3>
-                    Перфоратор BOSCH BFG 2000
-                  </h3>
+                  <h3>Перфоратор BOSCH BFG 2000</h3>
                 </div>
                 <div class="discount"></div>
                 <div class="product-price">12500 P.</div>
@@ -214,28 +206,28 @@
     	  </div>
           <ul class="manufacturer-list">
             <li>
-              <a href=""><img src="img/logo/manufacturer-bosch.png" width="126" height="37" alt="BOSCH"></a>
+              <a href=""><img src="img/logo/manufacturer-bosch.png" width="126" height="37" alt="Логотип BOSCH"></a>
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-makita.png" width="123" height="40" alt="Makita"></a>
+              <a href=""><img src="img/logo/manufacturer-makita.png" width="123" height="40" alt="Логотип Makita"></a>
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-dewalt.png" width="146" height="44" alt="DeWALT"></a>
+              <a href=""><img src="img/logo/manufacturer-dewalt.png" width="146" height="44" alt="Логотип DeWALT"></a>
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-interskol.png" width="200" height="75" alt="Интерскол"></a>
+              <a href=""><img src="img/logo/manufacturer-interskol.png" width="200" height="75" alt="Логотип Интерскол"></a>
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-hitachi.png" width="169" height="31" alt="HITACHI"></a>  
+              <a href=""><img src="img/logo/manufacturer-hitachi.png" width="169" height="31" alt="Логотип HITACHI"></a>  
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-lg.png" width="121" height="73" alt="LG"></a>   
+              <a href=""><img src="img/logo/manufacturer-lg.png" width="121" height="73" alt="Логотип LG"></a>   
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-aeg.png" width="151" height="96" alt="AEG"></a>    
+              <a href=""><img src="img/logo/manufacturer-aeg.png" width="151" height="96" alt="Логотип AEG"></a>    
             </li>
             <li>
-              <a href=""><img src="img/logo/manufacturer-metabo.png" width="204" height="69" alt="Metabo"></a>
+              <a href=""><img src="img/logo/manufacturer-metabo.png" width="204" height="69" alt="Логотип Metabo"></a>
             </li>
           </ul>
       </section>
@@ -299,11 +291,11 @@
           заехав в наш офис:</span>
           <div class="map-main">
             <a href="">
-        	    <img class="map" src="img/logo/map.jpg" width="300" height="158" alt="Карта">
+        	    <img class="map" src="img/logo/map.jpg" width="300" height="158" alt="Карта проезда">
             </a>
           </div>
           <div>
-        	  <button class="button button-contacts" type="button" aria-label="Написать письмо">Заблудились? Напишите нам</button>
+        	  <a class="button button-contacts" href="write-us.html" aria-label="Написать письмо">Заблудились? Напишите нам</a>
           </div>
         </div>
       </section>    
@@ -393,7 +385,7 @@
           </div>
          </div>
          <div class="modal-text-lette">
-            <label for="text-letter">Текст письма</label>
+            <label for="text-letter">Текст письма:</label>
             <textarea name="letter" id="text-letter" cols="3" placeholder="В свободной форме"></textarea>  
           </div>
         </div>   
