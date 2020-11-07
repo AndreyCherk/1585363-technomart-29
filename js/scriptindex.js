@@ -106,32 +106,32 @@ window.addEventListener("keydown", function (evt) {
 
 galleryControlsOne.addEventListener("click", function (evt) {
   evt.preventDefault();
-  galleryControlsTwo.classList.remove("current-btn");
-  galleryControlsOne.classList.add("current-btn");
+  galleryControlsTwo.classList.remove("current-button");
+  galleryControlsOne.classList.add("current-button");
   galleryItemTwo.classList.add("gallery-none");
   galleryItemOne.classList.remove("gallery-none");
 });
 
 galleryControlsTwo.addEventListener("click", function (evt) {
   evt.preventDefault();
-  galleryControlsTwo.classList.add("current-btn");
-  galleryControlsOne.classList.remove("current-btn");
-  galleryItemTwo.classList.remove("gallery-none");
-  galleryItemOne.classList.add("gallery-none");
-});
-
-galleryScrollingLeft.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  galleryControlsTwo.classList.add("current-btn");
-  galleryControlsOne.classList.remove("current-btn");
+  galleryControlsTwo.classList.add("current-button");
+  galleryControlsOne.classList.remove("current-button");
   galleryItemTwo.classList.remove("gallery-none");
   galleryItemOne.classList.add("gallery-none");
 });
 
 galleryScrollingRight.addEventListener("click", function (evt) {
   evt.preventDefault();
-  galleryControlsTwo.classList.remove("current-btn");
-  galleryControlsOne.classList.add("current-btn");
+  galleryControlsTwo.classList.add("current-button");
+  galleryControlsOne.classList.remove("current-button");
+  galleryItemTwo.classList.remove("gallery-none");
+  galleryItemOne.classList.add("gallery-none");
+});
+
+galleryScrollingLeft.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  galleryControlsTwo.classList.remove("current-button");
+  galleryControlsOne.classList.add("current-button");
   galleryItemTwo.classList.add("gallery-none");
   galleryItemOne.classList.remove("gallery-none");
 });
